@@ -1,0 +1,7 @@
+name_of_the_new_reagent = input('Название нового реактива: ')
+quantity = int(input('Количество(целое число): '))
+print(f'Реактив {name_of_the_new_reagent} поступил на склад в количестве {quantity} шт..')
+f = open("C:/Презентации/информатика/projects_2/task_2_2/inventory.txt", "w", encoding="utf-8")
+print(f'Реактив {name_of_the_new_reagent} поступил на склад в количестве {quantity} шт..', file=f)
+f.close()
+print('Файл записан')
