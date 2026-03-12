@@ -1,3 +1,3 @@
 #!/bin/bash
-sed -i "s/ /\t/" sequences.txt
+sed -i "s/ /\t/g" sequences.txt
 echo "Готово."
