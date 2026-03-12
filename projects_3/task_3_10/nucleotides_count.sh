@@ -1,6 +1,6 @@
 #!/bin/bash
 echo "-----------------------------------------------------------------"
-printf "%-20s %7s %7s %7s %7s\n" "Файл" "A" "T" "G" "C"
+printf "Файл" "A" "T" "G" "C"
 echo "-----------------------------------------------------------------"
 for file in *.fasta; do
     [ -e "$file" ] || continue
@@ -12,6 +12,6 @@ for file in *.fasta; do
     count_T=$(echo "$seq" | grep -o "T" | wc -l)
     count_G=$(echo "$seq" | grep -o "G" | wc -l)
     count_C=$(echo "$seq" | grep -o "C" | wc -l)
-    printf "%-20s %7d %7d %7d %7d\n" "$file" "$count_A" "$count_T" "$count_G" "$count_C"
+    printf "$file" "$count_A" "$count_T" "$count_G" "$count_C"
 done
 echo "-----------------------------------------------------------------"
